@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100&family=Lato:wght@100&family=MuseoModerno:wght@100&family=Open+Sans:wght@300&family=Work+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  /* font-family: "Work Sans" , sans-serif; */
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* 1rem = 10px; */
+}
+body {
+  overflow-x: hidden;
+}
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+}
+
+.header .logo {
+  height: 4rem;
+  width: 9rem;
+}
+.navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+.navbar-link:link,
+.navbar-link:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s;
+}
+.navbar-link:active,
+.navbar-link:hover {
+  color: greenyellow;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: black;
+}
+.mobile-nav-icon[name="close-circle-outline"] {
+  display: none;
+}
+/* responsive */
+@media (max-width: 980px) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+  }
+  .header {
+    position: relative;
+  }
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .active .navbar {
+    transform: translateX(0);
+    transition: all 0.5s linear;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-circle-outline"] {
+    display: block;
+  }
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+}
+@media (max-width: 35em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+  .header .logo {
+    width: 7rem;
+  }
+}
+
+
+/* SORRY I removed Your SECTIONS STYLES */
+
+/* THIS IS NEW STYLE FOR SECTION  */
+
+/* Its Minimal */
+
+
+.bg-cyan
+{
+    background-color: rgb(0, 186, 223);
+}
+.bg-tomato
+{
+    background-color: tomato;
+}
+.bg-teal
+{
+    background-color: rgb(12, 138, 255);
+}
+
+section
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section p
+{
+    font-size: 6vw;
+    text-align: center;
+    color:#000;
+}
+
+/* For Smooth Scrolling */
+
+/* html
+{
+    scroll-behavior: smooth;
+} */
